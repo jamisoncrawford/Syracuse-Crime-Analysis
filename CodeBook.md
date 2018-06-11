@@ -37,3 +37,13 @@ The following R packages were used in the data collection, cleaning, analysis, a
 
 In addition, base R functions and RStudio package dependencies were employed for versions 3.4.3 and 1.1.414, respectively.
 
+## Variable Definitions & Units of Analysis
+
+The following variables and their respective units are defined herein. Only variables which were not removed during analysis are defined, barring noteworthy transformations:
+
+1. `n`, `crime`, `term`, and `Crime` represent counts of reported crimes, grouped by `type`, `tract`, `month`, `geoid`, or their permutations;
+2. `month` describes the date in YYYY-MM-DD format of the first day of the month during which a `crime` was reported; it is an aggregate value in all data frames other than `crime` and a transformation of the original `date` variable; it is of class "POSIXlt"
+3. `geoid` is a standard FIPS code defining a census tract geography and is comprised of the `state`, `county`, and `tract` FIPS codes; these composite variables were "padded" with several "0" characters to be of proper length, as they are truncated when output from the Census Geocoder;
+4. `tract` is a human-readable format of variable `geoid`, which usually contains two digits and, occasionally, two additional decimal places, representing the last four digits of `geoid`. A decimal point was inserted and 2-digit `tract` values were further truncated from trailing "0" characters;
+5. `geometry` is a nested list of various longitude-latitude coordinates defining a spacial polygon, or a "shapefile" defining the geographic areas which comprise a census tract. `geometry` values are downloaded using package `tigris` and coerced to data frames using package `sf` ("simple features") for eas of use.
+6. `estimate`, `std.error`, `statistic`, and `p.value` constitute linear model coefficients for various regressions; variable `p-value` underwent multiple hypothesis correction using `p.adjust()` following *en masse* regression analysis for individual `tract` values and `months`
