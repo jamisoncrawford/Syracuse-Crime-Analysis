@@ -55,6 +55,7 @@ Check out an [interactive map here](interactive_crime_map.html).
 ## Updates
 
 2018-06-10: Initialized repository and performed data collection, analyses, and markdown documentation.
+2018-08-03: Published analysis and choropleth maps.
 
 ## Contributors
 
@@ -63,3 +64,4 @@ The following individuals have contributed significantly to this work:
 1. William Wagner-Flynn; Data Analyst, Syracuse City School District
 2. Frank Ridzi, PhD; Vice President of Community Investment, Central New York Community Foundation
 3. Jamison Crawford; Analyst & Facilitator, Central New York Community Foundation
+4. Jesse Lecy; Associate Professor, Arizona State University
