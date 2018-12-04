@@ -60,4 +60,4 @@ The following individuals have contributed significantly to this work:
 
 1. William Wagner-Flynn; Data Analyst, Syracuse City School District
 2. Frank Ridzi, PhD; Vice President of Community Investment, Central New York Community Foundation
-3. Jamison Crawford; Analyst & Facilitator, Central New York Community Foundation
+3. Jamison Crawford; Principal Analyst, Data Analysis & Visualization Consultant
