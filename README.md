@@ -12,6 +12,8 @@ The R script, `crime.script.r` has several package dependencies, all of which ar
 
 Data were pulled directly from the [Syracuse Post Standard Crime Database](https://www.syracuse.com/crime/index.ssf/page/police_reports.html) and reside in the `Data` folder: `spd_crimes_since_2016.csv`. Filters applied to search the database included "Department" set to "Syracuse Police", "Crime" to "All reported crimes", and "Date Range" from "01/01/2016" to "06/10/2016", as seen [here](https://i.imgur.com/dskkpXt.png), resulting in 12,775 observations. To retrieve and unzip these data, users must select the "Download Data" icon in the upper-right of the results field, as seen [here](https://i.imgur.com/ufJDscv.png).
 
+`processing_script_1.1.r` has been modified to pull data ranging between 2018-06-01 and 2018-11-30.
+
 ### Cleaning Process
 
 Once the data is retrieved, the `crime.script.r` then performs the following functions:
@@ -27,6 +29,8 @@ Once the data is retrieved, the `crime.script.r` then performs the following fun
 ### Manual Geocoding Process
 
 The [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/) allows users to geocode geographies in batches of up to 10,000 addresses. More information can be read [here](https://www.census.gov/geo/maps-data/data/geocoder.html). To geocode each file, `geo_1.csv` and `geo_2.csv`, users must select "Address Batch" under "FIND GEOGRAPHIES USING", and upload each file separately with the default values, viz. "Benchmark" set to "Public_AR_Current" and "Vintage" set to "Current_Current", as seen [here](https://i.imgur.com/8tL2BBJ.png). Select "Get Results" and your browser will indicate, in the bottom left, that it is "Waiting for geocoding.geo.census.gov...", as seen [here](https://i.imgur.com/zyKWcff.png). This process may take up to 15 minutes. Once both files have been uploaded and geocoded, your browser will indicate that they've downloaded, and you may retrieve them from your download folder, as seen [here](https://i.imgur.com/WNdImNH.png) and [here](https://i.imgur.com/PwKCRbk.png), respectively. The data collection and cleaning process may continue in `crime.script.r`. Notably, the geocoding process in these data is able to geocode input addresses with 94.49% accuracy.
+
+`processing_script_1.1.r` has been modified to pull data ranging between 2018-06-01 and 2018-11-30. Due to fewer crimes geocoded in the 5-month window, v. 1.1 now reflects a single .csv  file for Census geocoding.
 
 ### Cleaning & Analysis, Continued
 
@@ -53,6 +57,7 @@ Work is set to continue on these analyses.
 ## Updates
 
 2018-06-10: Initialized repository and performed data collection, analyses, and markdown documentation.
+2018-12-04: `processing_script_1.1.r` and related tables have been modified to pull data ranging between 2018-06-01 and 2018-11-30.
 
 ## Contributors
 
