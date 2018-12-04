@@ -56,9 +56,8 @@ Work is set to continue on these analyses.
 
 ## Updates
 
-2018-06-10: Initialized repository and performed data collection, analyses, and markdown documentation.
- 
-2018-12-04: `processing_script_1.1.r` and related tables have been modified for 2018-06-01 to 2018-11-30.
+* 2018-06-10: Initialized repository and performed data collection, analyses, and markdown documentation.
+* 2018-12-04: `processing_script_1.1.r` and related tables have been modified for 2018-06-01 to 2018-11-30.
 
 ## Contributors
 
